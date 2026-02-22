@@ -9,7 +9,7 @@ passowrd = os.environ.get("MY_PASSWORD")
 
 
 today = (datetime.now().month, datetime.now().day)
-data = pandas.read_csv("birthday.csv")
+data = pandas.read_csv("birthdays.csv")
 birthday_dict = {(data_row["month"], data_row["day"]) : data_row for (index, data_row) in data.iterrows()}
 
 if today in birthday_dict:
